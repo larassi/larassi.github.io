@@ -1,0 +1,84 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+html {
+    overflow-x: hidden;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 300;
+
+    background-color: #bababa;
+}
+.container {
+    min-height: 100vh;
+    height: 2000px;
+    width: 100vw;
+    display: flex;
+    flex-direction: row;
+}
+.left, .right {
+    flex: 1;
+    min-width: 150px;
+    padding: 40px;
+
+    background-color: #eeeeee;
+}
+/* MENU .................. */
+.logo {
+    display: block;
+    width: 100px;
+    height: 100px;
+    margin: 0 auto;
+    cursor: pointer;
+    position: sticky;
+    top: 40px;
+
+    background-image: url("../img/LOGO.svg");
+    background-repeat: no-repeat;
+}
+.logo:hover {
+    background-image: url("../img/LOGO_GRAY.svg");
+    background-repeat: no-repeat;
+}
+/* CONTENT ................. */
+.content {
+    flex: 6;
+}
+header {
+    text-align: center;
+    color: #eeeeee;
+    
+    background-image: url("../img/HEADER_BG.jpg");
+    background-size: cover;
+    background-position: 50% 55%;
+    background-repeat: no-repeat;
+    height: 700px;
+}
+h1 {
+    font-size: 5rem;
+    font-weight: 600;
+    letter-spacing: .1rem;
+    
+    padding-top: 300px;
+}
+header h2 {
+    font-size: 2rem;
+    font-weight: 400;
+}
+/* MENU */
+ul#menu {
+    display: flex;
+    flex-direction: column;
+    gap: 10vh;
+    height: 10vh;
+    position: sticky;
+    top: 25vh;
+
+    text-align: center;
+}
+ul#menu a {
+    font-size: 1.5rem;
+    text-decoration: none;
+    color: grey;
+}
+ul#menu a:hover {
+    color: black;
+}
