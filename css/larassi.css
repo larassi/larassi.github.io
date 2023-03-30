@@ -208,10 +208,23 @@ ul#menu a:hover {
     }
     header {
         height: 92vh;
+        max-height: 92vh;
+        background-color: black;
         background-size: cover;
+        background-position: bottom center;
     }
     h1 {
+        padding-top: 400px;
         font-size: 11vw;
     }
-    
+    section h3 {
+        font-size: 26px;
+        line-height: 36px;
+    }
+    article .box {
+        min-width: 80%;
+    }
+    article .box img {
+        object-position: bottom center;
+    }
 }
