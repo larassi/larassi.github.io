@@ -67,7 +67,7 @@ header h2 {
 ul#menu {
     display: flex;
     flex-direction: column;
-    gap: 10vh;
+    gap: 8vh;
     height: 10vh;
     position: sticky;
     top: 25vh;
@@ -81,4 +81,69 @@ ul#menu a {
 }
 ul#menu a:hover {
     color: black;
+}
+.socialmedia {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    position: sticky;
+    top: 90vh;
+}
+.socialmedia a {
+    font-size: 2rem;
+    text-decoration: none;
+    color: grey;
+}
+.socialmedia a:hover {
+    color: black;
+}
+
+
+
+
+
+/* RESPONSIVE */
+@media only screen and (max-width: 1200px) {
+    .right {
+        flex: 0;
+        min-width: 0;
+        width: 0;
+        padding: 0;
+    }
+    .left {
+        min-width: 120px;
+    }
+}
+@media only screen and (max-width: 616px) {
+    .container {
+        flex-direction: column;
+    }
+    .left {
+        max-height: 8vh;
+        padding: 0px;
+        flex: 0;
+    }
+    .logo {
+        position: unset;
+        width: 0px;
+        height: 0px;
+        margin: 20px;
+    }
+    ul#menu {
+        position: unset;
+        top: 0;
+        justify-content: space-evenly;
+        flex-direction: row;
+        gap: 0;
+    }
+    ul#menu a {
+        font-size: 1.25rem;
+    }
+    .socialmedia {
+        position: unset;
+        top: 0;
+        padding: 0;
+        width: 0;
+        height: 0;
+    }
 }
