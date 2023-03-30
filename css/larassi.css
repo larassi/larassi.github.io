@@ -1,12 +1,20 @@
 @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@100;200;300;400;500;600;700;800;900&display=swap');
 
+:root {
+    --blue: #0079C8;
+    --black: #222;
+    --lightwhite: #eee;
+    --white: #fff;
+    --shadow: #bbb;
+}
+
 html {
     overflow-x: hidden;
     scroll-behavior: smooth;
     font-family: 'Raleway', sans-serif;
     font-weight: 300;
 
-    background-color: #fff;
+    background-color: var(--white)
 }
 .container {
     min-height: 100vh;
@@ -19,8 +27,8 @@ html {
     min-width: 150px;
     padding: 40px;
 
-    box-shadow: 0px 0px 30px 0px #eee inset;
-    background-color: #fff;
+    box-shadow: 0px 0px 30px 0px var(--lightwhite) inset;
+    background-color: var(--white)
 }
 /* MENU .................. */
 .logo {
@@ -42,10 +50,10 @@ html {
 }
 header {
     text-align: center;
-    color: #eeeeee;
+    color: var(--lightwhite);
     
     background-image: url("../img/HEADER_BG.jpg");
-    box-shadow: 0px 0px 30px 0px #ddd;
+    box-shadow: 0px 0px 30px 0px var(--shadow);
     background-size: cover;
     background-position: 50% 55%;
     background-repeat: no-repeat;
@@ -55,10 +63,13 @@ h1 {
     font-size: 5rem;
     font-weight: 600;
     letter-spacing: .1rem;
+    color: var(--white);
     
     padding-top: 300px;
 }
+
 h2 {
+    color: var(--blue);
     font-size: 3rem;
     font-weight: 400;
 }
@@ -70,9 +81,13 @@ section {
 section h3 {
     font-size: 32px;
     line-height: 44px;
-    font-weight: 300;
-    color: grey;
+    font-weight: 400;
+    color: var(--black);
 }
+.bold {
+    font-weight: 500;
+}
+
 
 aside {
     padding: 0 4vw 0 4vw;
@@ -80,7 +95,8 @@ aside {
 aside h2 {
     padding-top: 40px;
     text-align: center;
-    color: grey;
+    color: var(--black);
+    font-weight: 700;
 
     margin-bottom: 8vh;
 }
@@ -99,9 +115,9 @@ article .box {
     max-height: 37.5vw;
     min-width: 400px;
     max-width: 25vw;
-    background-color: #dbdbdb;
+    background-color: var(--lightwhite);
     border-radius: 8px;
-    box-shadow: 0px 0px 30px 0px #eee;
+    box-shadow: 0px 0px 15px 0px var(--shadow);
     box-sizing: border-box;
 }
 article .box img {
@@ -112,12 +128,33 @@ article .box img {
 }
 
 footer {
-    padding: 16vh 8vw 16vh 8vw;
+    padding: 16vh 8vw 12vh 8vw;
+}
+.contactflex {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.alignRight {
+    text-align: right;
 }
 footer h2 {
-    color: grey;
+    color: var(--black);
+    font-weight: 700;
     text-align: center;
+    margin-bottom: 30px;
 }
+footer a {
+    text-decoration: none;
+    font-size: 26px;
+    line-height: 40px;
+    font-weight: 400;
+    color: var(--black);
+}
+footer a:hover {
+    color: #0079C8;
+}
+
 /* MENU */
 ul#menu {
     display: flex;
@@ -130,15 +167,16 @@ ul#menu {
     text-align: center;
 }
 ul#menu a {
-    font-size: 1.5rem;
+    font-size: 1.75rem;
+    font-weight: 500;
     text-decoration: none;
-    color: grey;
+    color: var(--black);
 }
 ul#menu .contact {
-    font-weight: 500;
+    font-weight: 700;
 }
 ul#menu a:hover {
-    color: black;
+    color: var(--blue);
 }
 .socialmedia {
     display: flex;
@@ -150,10 +188,10 @@ ul#menu a:hover {
 .socialmedia a {
     font-size: 2rem;
     text-decoration: none;
-    color: grey;
+    color: var(--black);
 }
 .socialmedia a:hover {
-    color: black;
+    color: var(--blue);
 }
 
 
@@ -171,12 +209,20 @@ ul#menu a:hover {
     .left {
         min-width: 120px;
     }
+    ul#menu a {
+        font-size: 22px;
+    }
+    .socialmedia {
+        gap: 30px;
+    }
 }
 @media only screen and (max-width: 616px) {
     .container {
         flex-direction: column;
     }
     .left {
+        position: sticky;
+        top: 0;
         max-height: 8vh;
         padding: 0px;
         flex: 0;
@@ -197,9 +243,10 @@ ul#menu a:hover {
     ul#menu a {
         font-size: 3.25vw;
         font-weight: 400;
-        color: black;
+        color: var(--black);
     }
     .socialmedia {
+        display: none;
         position: unset;
         top: 0;
         padding: 0;
@@ -209,7 +256,7 @@ ul#menu a:hover {
     header {
         height: 92vh;
         max-height: 92vh;
-        background-color: black;
+        background-color: var(--black);
         background-size: cover;
         background-position: bottom center;
     }
@@ -222,9 +269,16 @@ ul#menu a:hover {
         line-height: 36px;
     }
     article .box {
-        min-width: 80%;
+        min-width: 92%;
     }
     article .box img {
         object-position: bottom center;
+    }
+    footer {
+        padding: 6vh 6vw 6vh 6vw;
+    }
+    footer a {
+        font-size: 20px;
+        line-height: 30px;
     }
 }
