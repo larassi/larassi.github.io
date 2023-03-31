@@ -52,7 +52,7 @@ header {
     text-align: center;
     color: var(--lightwhite);
     
-    background-image: url("../img/HEADER_BG.jpg");
+    background-image: url("../img/HEADER_BG.webp");
     box-shadow: 0px 0px 30px 0px var(--shadow);
     background-size: cover;
     background-position: 50% 55%;
