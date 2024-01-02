@@ -78,12 +78,16 @@ section {
     display: inline-block;
     padding: 16vh 8vw 16vh 8vw;
 }
-section h3 {
+section h3, section a {
     font-size: 32px;
     line-height: 44px;
     font-weight: 400;
     color: var(--black);
 }
+section a {
+    color: var(--blue);
+}
+
 .bold {
     font-weight: 500;
 }
